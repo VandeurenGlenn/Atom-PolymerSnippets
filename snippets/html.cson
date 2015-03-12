@@ -31,7 +31,9 @@
           && 'content' in document.createElement('template')) {
             // Native WC support. Do nothing
           } else {
-            document.write('\x3Cscript src="/bower_components/webcomponentsjs/webcomponents.js">\x3C/script>');
+            var wc = document.createElement('script');
+            wc.setAttribute = ('src', '/bower_components/webcomponentsjs/webcomponents.js');
+            document.body.append(wc);
           }
         </script>
       </head>
